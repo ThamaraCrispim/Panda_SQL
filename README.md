@@ -9,12 +9,12 @@ O PANDA – Grupo de Processamento e ANálise de DAdos da UFSCar – reúne alun
 - Realização de minicursos
 - Organização de Datathons
 - etc
+
 ## Objetivos do Repositório
 
 - Documentar projetos e atividades desenvolvidas durante o projeto de extensão
 - Compartilhar conhecimentos adquiridos em Ciência de Dados
 - Praticar habilidades de análise e visualização de dados com Pandas
-
 
 Repositório para o planejamento de grupos de estudo de SQL para o semestre 2024/1. Inclui materiais de referência, tópicos de estudo semanais, e práticas associadas.
 
@@ -24,6 +24,7 @@ Repositório para o planejamento de grupos de estudo de SQL para o semestre 2024
 - Getting Started With SQL and BigQuery (Kaggle Workflow)
 - Stanford SQL Course
 - SQLite
+- Canal Programação Dinâmica: [Playlist de SQL](https://www.youtube.com/playlist?list=PL5TJqBvpXQv5n1N15kcK1m9oKJm_cv)
 
 ### Tópicos de Estudo
 
@@ -74,3 +75,4 @@ Repositório para o planejamento de grupos de estudo de SQL para o semestre 2024
 
 - Participação na reunião semanal
 - Se não puder comparecer, entregar um resumo do que foi estudado
+
