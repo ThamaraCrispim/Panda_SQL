@@ -22,8 +22,6 @@ Repositório para o planejamento de grupos de estudo de SQL para o semestre 2024
 
 - Getting Started with SQL, Thomas Nield, Editora O’REILLY
 - Getting Started With SQL and BigQuery (Kaggle Workflow)
-- Stanford SQL Course
-- SQLite
 - Canal Programação Dinâmica: [Playlist de SQL](https://www.youtube.com/playlist?list=PL5TJqBvpXQv5n1N15kcK1m9oKJm_cv)
 
 ### Tópicos de Estudo
@@ -68,11 +66,7 @@ Repositório para o planejamento de grupos de estudo de SQL para o semestre 2024
 
 ### Encontros
 
-- Estudo teórico ao longo da semana individualmente
 - Reunião semanal para prática
 
-### Presença
 
-- Participação na reunião semanal
-- Se não puder comparecer, entregar um resumo do que foi estudado
 
