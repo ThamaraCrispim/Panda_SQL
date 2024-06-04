@@ -1,1 +1,18 @@
+-- SELECT: Seleciona dados de uma tabela
+SELECT coluna1, coluna2 FROM tabela;
+
+-- WHERE: Filtra registros com base em uma condição
+SELECT coluna1 FROM tabela WHERE condição;
+
+-- GROUP BY: Agrupa registros por uma ou mais colunas
+SELECT coluna1, AGG_FUNC(coluna2) FROM tabela GROUP BY coluna1;
+
+-- ORDER BY: Ordena os resultados por uma ou mais colunas
+SELECT coluna1 FROM tabela ORDER BY coluna1 ASC|DESC;
+
+-- DISTINCT: Retorna apenas valores distintos
+SELECT DISTINCT coluna FROM tabela;
+
+-- LIMIT: Limita o número de registros retornados
+SELECT coluna FROM tabela LIMIT número;
 
