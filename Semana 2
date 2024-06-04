@@ -1,1 +1,139 @@
+# Funções Matemáticas no MySQL
 
+1. **COUNT()**
+   - **Estrutura:** `COUNT(expression)` ou `COUNT(*)`
+   - **Funcionamento:**
+     - `COUNT(*)`: Conta o número total de linhas no conjunto de resultados, incluindo linhas com valores nulos.
+     - `COUNT(expression)`: Conta o número de linhas onde a expressão não é nula.
+   - **Exemplo:**
+     ```sql
+     SELECT COUNT(*) AS total_empregados FROM empregados;
+     ```
+     - Este exemplo retorna o número total de empregados na tabela `empregados`.
+
+2. **SUM()**
+   - **Estrutura:** `SUM(expression)`
+   - **Funcionamento:**
+     - Calcula a soma total dos valores na coluna especificada pela expressão.
+   - **Exemplo:**
+     ```sql
+     SELECT SUM(salario) AS total_salario FROM empregados;
+     ```
+     - Este exemplo retorna a soma total dos salários de todos os empregados na tabela `empregados`.
+
+3. **AVG()**
+   - **Estrutura:** `AVG(expression)`
+   - **Funcionamento:**
+     - Calcula a média dos valores na coluna especificada pela expressão.
+   - **Exemplo:**
+     ```sql
+     SELECT AVG(salario) AS media_salario FROM empregados;
+     ```
+     - Este exemplo retorna a média dos salários de todos os empregados na tabela `empregados`.
+
+4. **MAX()**
+   - **Estrutura:** `MAX(expression)`
+   - **Funcionamento:**
+     - Retorna o valor máximo na coluna especificada pela expressão.
+   - **Exemplo:**
+     ```sql
+     SELECT MAX(salario) AS maior_salario FROM empregados;
+     ```
+     - Este exemplo retorna o maior salário entre todos os empregados na tabela `empregados`.
+
+# Funções de Tempo no MySQL
+
+1. **CURDATE()**
+   - **Estrutura:** `CURDATE()`
+   - **Funcionamento:**
+     - Retorna a data atual no formato YYYY-MM-DD.
+   - **Exemplo:**
+     ```sql
+     SELECT CURDATE() AS data_atual;
+     ```
+     - Este exemplo retorna a data atual.
+
+2. **NOW()**
+   - **Estrutura:** `NOW()`
+   - **Funcionamento:**
+     - Retorna a data e hora atuais no formato YYYY-MM-DD HH:MM:SS.
+   - **Exemplo:**
+     ```sql
+     SELECT NOW() AS data_hora_atual;
+     ```
+     - Este exemplo retorna a data e hora atuais.
+
+3. **DATE()**
+   - **Estrutura:** `DATE(expression)`
+   - **Funcionamento:**
+     - Extrai a parte da data de um valor de data e hora.
+   - **Exemplo:**
+     ```sql
+     SELECT DATE(NOW()) AS data_atual;
+     ```
+     - Este exemplo retorna apenas a parte da data da data e hora atuais.
+
+4. **DATEDIFF()**
+   - **Estrutura:** `DATEDIFF(date1, date2)`
+   - **Funcionamento:**
+     - Retorna a diferença em dias entre as duas datas especificadas.
+   - **Exemplo:**
+     ```sql
+     SELECT DATEDIFF('2024-06-04', '2024-01-01') AS diferenca_dias;
+     ```
+     - Este exemplo retorna a diferença em dias entre as datas '2024-06-04' e '2024-01-01'.
+
+5. **ADDDATE()**
+   - **Estrutura:** `ADDDATE(date, INTERVAL value unit)`
+   - **Funcionamento:**
+     - Adiciona um intervalo especificado a uma data.
+   - **Exemplo:**
+     ```sql
+     SELECT ADDDATE('2024-06-04', INTERVAL 10 DAY) AS nova_data;
+     ```
+     - Este exemplo adiciona 10 dias à data '2024-06-04'.
+
+6. **SUBDATE()**
+   - **Estrutura:** `SUBDATE(date, INTERVAL value unit)`
+   - **Funcionamento:**
+     - Subtrai um intervalo especificado de uma data.
+   - **Exemplo:**
+     ```sql
+     SELECT SUBDATE('2024-06-04', INTERVAL 10 DAY) AS nova_data_subtracao;
+     ```
+     - Este exemplo subtrai 10 dias da data '2024-06-04'.
+----------------------------------------------------------------------
+
+# Criação de Tabelas (CREATE, ALTER, DROP, INSERÇÃO)
+
+## CREATE TABLE
+
+`CREATE TABLE` é uma declaração SQL usada para criar uma nova tabela em um banco de dados. Ela especifica o nome da tabela e as colunas que a tabela conterá, juntamente com seus tipos de dados e outras opções.
+
+## ALTER TABLE
+
+`ALTER TABLE` é uma declaração SQL usada para modificar uma tabela existente em um banco de dados. Pode ser usada para adicionar, modificar ou excluir colunas, bem como para alterar outras propriedades da tabela.
+
+## DROP TABLE
+
+`DROP TABLE` é uma declaração SQL usada para excluir uma tabela existente de um banco de dados. Todos os dados e estrutura da tabela são removidos permanentemente quando essa declaração é executada.
+
+## INSERÇÃO (INSERT)
+
+`INSERT INTO` é uma declaração SQL usada para adicionar novos registros a uma tabela existente. É usado para especificar os valores que devem ser inseridos em cada coluna da tabela.
+
+# Schemas
+
+## Schema
+
+Em um banco de dados, um schema é uma coleção de objetos, como tabelas, visualizações, índices, etc. Ele é usado para organizar e agrupar objetos relacionados no banco de dados. Por exemplo, você pode ter um schema para clientes e outro schema para produtos em um banco de dados de comércio eletrônico.
+
+# Chaves Primárias e Secundárias
+
+## Chave Primária (Primary Key)
+
+Uma chave primária é uma coluna ou conjunto de colunas que identifica exclusivamente cada registro em uma tabela. Deve ser única para cada registro e não pode conter valores nulos. É usada para garantir a integridade dos dados e facilitar a indexação.
+
+## Chave Secundária (Foreign Key)
+
+Uma chave secundária é uma coluna ou conjunto de colunas em uma tabela que referencia a chave primária de outra tabela. É usada para estabelecer relações entre tabelas em um banco de dados relacional. Garante a integridade referencial entre as tabelas, mantendo a consistência dos dados.
