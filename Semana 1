@@ -1,3 +1,8 @@
+# Comandos Básicos do MySQL
+
+Vamos usar MySQL para executar consultas básicas. Aqui estão alguns dos comandos mais comuns:
+
+```sql
 -- SELECT: Seleciona dados de uma tabela
 SELECT coluna1, coluna2 FROM tabela;
 
@@ -15,4 +20,3 @@ SELECT DISTINCT coluna FROM tabela;
 
 -- LIMIT: Limita o número de registros retornados
 SELECT coluna FROM tabela LIMIT número;
-
