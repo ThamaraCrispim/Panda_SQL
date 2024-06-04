@@ -1,1 +1,45 @@
+# Condicional
+
+## CASE
+
+CASE é uma expressão condicional que permite avaliar condições em uma consulta SQL.
+Ele funciona como uma estrutura de controle de fluxo, permitindo que você execute diferentes ações com base em condições específicas.
+É útil para realizar transformações condicionais nos dados durante consultas SQL.
+
+## LIKE
+
+LIKE é um operador usado em consultas SQL para comparar um valor de coluna com um padrão específico.
+Ele permite realizar correspondências parciais ou completas com strings usando caracteres curinga, como '%' para representar qualquer sequência de caracteres e '_' para representar um único caractere.
+É frequentemente usado em conjunto com a cláusula WHERE para filtrar resultados com base em padrões de texto.
+
+## HAVING
+
+HAVING é uma cláusula usada em consultas SQL para aplicar condições a grupos de linhas em vez de linhas individuais.
+Ela é semelhante à cláusula WHERE, mas é usada após a cláusula GROUP BY em consultas que agregam dados usando funções como SUM, COUNT, AVG, etc.
+É útil para filtrar grupos de resultados com base em condições de agregação.
+
+## IN
+
+IN é um operador usado em consultas SQL para verificar se um valor está presente em uma lista de valores especificada.
+Ele permite filtrar resultados com base em múltiplos valores, em vez de apenas um único valor como é feito com o operador =.
+
+# Junção
+
+## LEFT JOIN
+
+LEFT JOIN é um tipo de junção em SQL que retorna todos os registros da tabela à esquerda da junção e os registros correspondentes da tabela à direita da junção.
+Se não houver correspondência na tabela à direita, os valores NULL serão retornados para as colunas da tabela à direita.
+É útil para recuperar todos os registros de uma tabela, mesmo que não haja correspondência na tabela relacionada.
+
+## RIGHT JOIN
+
+RIGHT JOIN é similar ao LEFT JOIN, mas retorna todos os registros da tabela à direita da junção e os registros correspondentes da tabela à esquerda da junção.
+Se não houver correspondência na tabela à esquerda, os valores NULL serão retornados para as colunas da tabela à esquerda.
+É menos comum do que o LEFT JOIN, mas pode ser útil em certas situações.
+
+## INNER JOIN
+
+INNER JOIN é um tipo de junção em SQL que retorna apenas os registros que têm correspondências em ambas as tabelas sendo unidas.
+Ele combina os registros das duas tabelas com base em uma condição especificada na cláusula ON.
+É usado para recuperar apenas os dados que satisfazem uma condição de junção.
 
