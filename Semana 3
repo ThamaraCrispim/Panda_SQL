@@ -1,1 +1,207 @@
+Nome: Thamara Crispim
+
+Semana 3 
+Condicional (CASE, LIKE, HAVING, IN)
+Prática:  Pan-Indian Consumer Transaction Dataset (kaggle.com) 
+ Junção (LEFT, RIGHT e INNER JOIN, ON)
+
+Tópicos Abordados
+Criação de Tabelas (CREATE, ALTER, DROP, INSERÇÃO)
+Schemas
+Chaves Primárias e Secundárias
+Queries com Condicional (CASE, LIKE, HAVING, IN)
+Banco de Dados Utilizado nos Estudos:
+Pan-Indian Consumer Transaction Dataset (Kaggle.com)
+
+Condicional
+O CASE é uma cláusula que pode ser usada para distinguir valores, muito similar ao CASE das linguagens de programação como C ou C++. Ele é utilizado para identificar um valor, e caso esse valor seja igual à condição, algo deve ser feito.
+Sintaxe:
+
+ SELECT
+    ...,
+    CASE
+        WHEN coluna1 IS NOT NULL THEN coluna1
+        WHEN coluna2 IS NOT NULL THEN coluna2
+        ELSE NULL
+    END AS nova_coluna
+FROM tabela;
+
+
+HAVING
+A cláusula HAVING é muito parecida com a cláusula WHERE, mas é utilizada junto a operações de agregações, especificando a coluna e o valor mínimo que aquela coluna deve ter após o agrupamento.
+Exemplo:
+SELECT coluna1, COUNT(*)
+FROM TABELA
+GROUP BY coluna1
+HAVING COUNT(*) > 3;
+
+
+IN
+A cláusula IN é similar ao IN da linguagem Python e pode ser utilizada da seguinte forma:
+Exemplo:
+SELECT *
+FROM TABELA
+WHERE coluna1 IN (SELECT coluna FROM tabela2);
+
+
+Combinações/Junções
+LEFT/RIGHT JOIN
+LEFT JOIN
+Retorna todas as linhas da tabela à esquerda (tabela1) e as linhas correspondentes da tabela à direita (tabela2). Se não houver correspondência, as colunas da tabela à direita terão valores nulos.
+Exemplo:
+SELECT
+    tabela1.coluna1,
+    tabela1.coluna2,
+    tabela2.coluna3
+FROM
+    tabela1
+LEFT JOIN
+    tabela2 ON tabela1.chave = tabela2.chave;
+
+RIGHT JOIN
+Retorna todas as linhas da tabela à direita (tabela2) e as linhas correspondentes da tabela à esquerda (tabela1). Se não houver correspondência, as colunas da tabela à esquerda terão valores nulos.
+Exemplo:
+SELECT
+    tabela1.coluna1,
+    tabela1.coluna2,
+    tabela2.coluna3
+FROM
+    tabela1
+RIGHT JOIN
+    tabela2 ON tabela1.chave = tabela2.chave;
+
+INNER JOIN
+Somente as linhas que têm correspondência em ambas as tabelas serão retornadas.
+Exemplo:
+SELECT
+    tabela1.coluna1,
+    tabela1.coluna2,
+    tabela2.coluna3
+FROM
+    tabela1
+INNER JOIN
+    tabela2 ON tabela1.chave = tabela2.chave;
+
+
+
+
+
+
+
+
+
+Claro, aqui está o texto reformulado em um formato apropriado para um documento Word:
+
+Resumo dos Estudos - Semana 02
+Tópicos Abordados
+Criação de Tabelas (CREATE, ALTER, DROP, INSERÇÃO)
+Schemas
+Chaves Primárias e Secundárias
+Queries com Condicional (CASE, LIKE, HAVING, IN)
+Banco de Dados Utilizado nos Estudos:
+Pan-Indian Consumer Transaction Dataset (Kaggle.com)
+
+Condicional
+O CASE é uma cláusula que pode ser usada para distinguir valores, muito similar ao CASE das linguagens de programação como C ou C++. Ele é utilizado para identificar um valor, e caso esse valor seja igual à condição, algo deve ser feito.
+Sintaxe:
+sql
+Copiar código
+SELECT
+    ...,
+    CASE
+        WHEN coluna1 IS NOT NULL THEN coluna1
+        WHEN coluna2 IS NOT NULL THEN coluna2
+        ELSE NULL
+    END AS nova_coluna
+FROM tabela;
+
+As condições são avaliadas na ordem especificada. Se a primeira condição não for satisfeita, a segunda será testada, e assim por diante. Isso é útil ao construir uma nova coluna na base de dados.
+
+HAVING
+A cláusula HAVING é muito parecida com a cláusula WHERE, mas é utilizada junto a operações de agregações, especificando a coluna e o valor mínimo que aquela coluna deve ter após o agrupamento.
+Exemplo:
+sql
+Copiar código
+SELECT coluna1, COUNT(*)
+FROM TABELA
+GROUP BY coluna1
+HAVING COUNT(*) > 3;
+
+Essa consulta exibirá apenas as linhas que aparecem mais de 3 vezes após o agrupamento.
+
+IN
+A cláusula IN é similar ao IN da linguagem Python e pode ser utilizada da seguinte forma:
+Exemplo:
+sql
+Copiar código
+SELECT *
+FROM TABELA
+WHERE coluna1 IN (SELECT coluna FROM tabela2);
+
+Dessa maneira, apenas as linhas em que a coluna1 estiver na tabela2 na coluna "coluna" serão exibidas.
+
+Combinações/Junções
+LEFT/RIGHT JOIN
+LEFT JOIN
+Retorna todas as linhas da tabela à esquerda (tabela1) e as linhas correspondentes da tabela à direita (tabela2). Se não houver correspondência, as colunas da tabela à direita terão valores nulos.
+Exemplo:
+sql
+Copiar código
+SELECT
+    tabela1.coluna1,
+    tabela1.coluna2,
+    tabela2.coluna3
+FROM
+    tabela1
+LEFT JOIN
+    tabela2 ON tabela1.chave = tabela2.chave;
+
+Assim, todas as linhas da tabela1 serão retornadas, e as linhas da tabela2 que combinarem com a condição da tabela1 também serão retornadas; o resto ficará nulo.
+RIGHT JOIN
+Retorna todas as linhas da tabela à direita (tabela2) e as linhas correspondentes da tabela à esquerda (tabela1). Se não houver correspondência, as colunas da tabela à esquerda terão valores nulos.
+Exemplo:
+sql
+Copiar código
+SELECT
+    tabela1.coluna1,
+    tabela1.coluna2,
+    tabela2.coluna3
+FROM
+    tabela1
+RIGHT JOIN
+    tabela2 ON tabela1.chave = tabela2.chave;
+
+Assim, todas as linhas da tabela2 serão retornadas, e as linhas da tabela1 que combinarem com a condição da tabela2 também serão retornadas; o resto ficará nulo.
+INNER JOIN
+Somente as linhas que têm correspondência em ambas as tabelas serão retornadas.
+Exemplo:
+sql
+Copiar código
+SELECT
+    tabela1.coluna1,
+    tabela1.coluna2,
+    tabela2.coluna3
+FROM
+    tabela1
+INNER JOIN
+    tabela2 ON tabela1.chave = tabela2.chave;
+
+Assim, somente as linhas que estiverem em ambas as tabelas serão retornadas.
+
+Parte Prática
+
+
+Atualizando os Valores de Category Nulos
+
+ UPDATE IndiaTransact
+SET category = 'others'
+WHERE category IS NULL;
+
+Soma da Quantia Total de Vendas com Fraude e Sem Fraude
+
+SELECT
+    ROUND(SUM(CASE WHEN is_fraud THEN amt ELSE 0 END), 2) AS amt_fraud,
+    ROUND(SUM(CASE WHEN NOT is_fraud THEN amt ELSE 0 END), 2) AS amt_no_fraud
+FROM IndiaTransact;
+
 
